@@ -10,9 +10,9 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "reply2kanishka@gmail.com", // Your email
-    pass: "cdwf xenv ogaz jpxi", // See "How to Run" section below
-  },
+  user: process.env.EMAIL_USER, 
+  pass: process.env.EMAIL_PASS,
+},
 });
 
 app.post("/send-email", (req, res) => {
@@ -36,3 +36,4 @@ app.post("/send-email", (req, res) => {
 });
 
 app.listen(3000, () => console.log("Server running on port 3000"));
+
