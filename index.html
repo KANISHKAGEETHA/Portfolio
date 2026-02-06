@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanishka P G | Full Stack Web Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #00d2ff;
+        --secondary: #3a7bd5;
+        --bg: #0f172a;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --text: #f1f5f9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Background Animation */
+      .blob {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        filter: blur(80px);
+        opacity: 0.1;
+        z-index: -1;
+        border-radius: 50%;
+      }
+
+      /* Navigation */
+      nav {
+        padding: 2rem 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 2rem;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Hero Section */
+
+      header {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+      }
+      .hero-content {
+        flex: 1;
+      }
+      .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .hero-image img {
+        width: 350px;
+        height: 350px;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        object-fit: cover;
+        border: 4px solid var(--primary);
+        box-shadow: 0 0 50px rgba(0, 210, 255, 0.3);
+        animation: morph 8s ease-in-out infinite;
+      }
+
+      @keyframes morph {
+        0%,
+        100% {
+          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        50% {
+          border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+        }
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+        color: #94a3b8;
+        margin-bottom: 2rem;
+        max-width: 500px;
+      }
+
+      /* Sections */
+      section {
+        padding: 100px 10%;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      /* Cards Style */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      .ToolsPlatforms {
+        background: var(--card-bg);
+        padding: 2rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: 0.4s;
+      }
+      .ToolsPlatforms:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: var(--primary);
+      }
+
+      /* Skill Pills */
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skill-tag {
+        background: rgba(0, 210, 255, 0.1);
+        color: var(--primary);
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        border: 1px solid var(--primary);
+      }
+
+      /* Contact Form */
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        padding: 2.5rem;
+        border-radius: 20px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 1.5rem;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid #334155;
+        border-radius: 10px;
+        color: white;
+      }
+      button {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        color: white;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        width: 100%;
+        transition: 0.3s;
+      }
+      button:hover {
+        opacity: 0.9;
+        transform: scale(1.02);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column-reverse;
+          text-align: center;
+          padding-top: 50px;
+        }
+        .hero-image img {
+          width: 250px;
+          height: 250px;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+      }
+      /* Styling for the Download Button */
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 25px;
+        background: var(--primary);
+        color: #0f172a;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease;
+        border: 2px solid var(--primary);
+      }
+
+      .download-btn:hover {
+        background: transparent;
+        color: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blob"></div>
+
+    <nav>
+      <div class="logo">Kanishka.</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Knowledge</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero-content">
+        <p style="color: var(--primary); letter-spacing: 3px">HELLO, I AM</p>
+        <h1>Kanishka PG</h1>
+        <p>
+          Social Media Executive & IT Undergraduate specialized in driving
+          insights through data and building efficient software solutions.
+        </p>
+        <div style="margin-top: 25px; margin-bottom: 25px">
+          <a
+            href="./KANISHKA_resume.pdf"
+            download="Kanishka_resume"
+            class="download-btn"
+          >
+            <i class="fas fa-file-download"></i> Download Resume
+          </a>
+        </div>
+        <div class="socials">
+          <a
+            href="https://github.com/KANISHKAGEETHA"
+            style="color: white; font-size: 1.5rem; margin-right: 15px"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/kanishka-g-57b397297"
+            style="color: white; font-size: 1.5rem"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="1000189335.jpeg" alt="Kanishka P G" />
+      </div>
+    </header>
+
+    <section id="about">
+      <h2 class="section-title">Education & Background</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 style="color: var(--primary)">B.Tech Information Technology</h3>
+          <p>Velalar College of Engineering and Technology</p>
+          <p style="font-size: 0.9rem; color: #94a3b8">
+            2022 - 2026 | CGPA: 7.99/10.0
+          </p>
+          <br />
+          <p>
+            Focused on Data Structures, OOP, and Database Management. Active
+            participant in Smart India Hackathon 2024.
+          </p>
+        </div>
+        <div class="ToolsPlatforms">
+          <h3 style="color: var(--primary)">Current Experience</h3>
+          <p>Social Media Executive @ Doctpro</p>
+          <p style="font-size: 0.9rem; color: #94a3b8">Jan 2025 - Present</p>
+          <br />
+          <p>
+            Analyzing SEO, Google My Business metrics, and social media
+            engagement to drive marketing decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background: rgba(255, 255, 255, 0.02)">
+      <h2 class="section-title">Technical Knowledge</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Programming</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="Tools & Platforms">
+          <h3>Web & Tools</h3>
+          <div class="skills-list">
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">Git/GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Commercial Space Detection</h3>
+          <p style="color: #94a3b8; margin: 15px 0">
+            Mobile application using GPS and video inputs to identify available
+            rental spaces in real-time using Cloud Processing.
+          </p>
+          <a href="#" style="color: var(--primary); text-decoration: none"
+            >View Code →</a
+          >
+        </div>
+        <div class="card">
+          <h3>Student Management System</h3>
+          <p style="color: #94a3b8; margin: 15px 0">
+            Android application built with Java and SQLite, featuring full CRUD
+            functionality for academic records.
+          </p>
+          <a href="#" style="color: var(--primary); text-decoration: none"
+            >View Code →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+
+      <div style="text-align: center; margin-bottom: 2rem">
+        <a
+          href="https://linkedin.com/in/kanishka-g-57b397297"
+          target="_blank"
+          style="
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+          "
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+          href="mailto:reply2kanishka@gmail.com"
+          style="
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+          "
+        >
+          <i class="fas fa-envelope"></i> reply2kanishka@gmail.com
+        </a>
+      </div>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+        <p id="status" style="margin-top: 1rem; text-align: center"></p>
+      </form>
+    </section>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+        const status = document.getElementById("status");
+        status.innerText = "Sending...";
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        const response = await fetch(
+          "https://your-app-name.onrender.com/send-email",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          },
+        );
+
+        if (response.ok) {
+          status.innerText = "Message sent successfully!";
+          form.reset();
+        } else {
+          status.innerText = "Error sending message.";
+        }
+      };
+    </script>
+  </body>
+</html>
