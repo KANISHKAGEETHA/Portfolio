@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kanishka P G – Java &amp; Software Developer</title>
+<meta name="description" content="Portfolio of Kanishka P G, B.Tech IT graduate skilled in Java, SQL, DSA and mobile app development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5fb;--surface:#fff;--text:#12182b;--muted:#566079;--line:#d9dfec;--a1:#b94e08;--a2:#2459d6;--code:#0f1320;--codetx:#e8ebf5;
+--hd:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--bd:'DM Sans','Segoe UI',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1320;--surface:#171c2e;--text:#e8ebf5;--muted:#9aa3bd;--line:#2a3150;--a1:#ffb347;--a2:#7fb0ff;--code:#0a0d18;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1320;--surface:#171c2e;--text:#e8ebf5;--muted:#9aa3bd;--line:#2a3150;--a1:#ffb347;--a2:#7fb0ff;--code:#0a0d18;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.65 var(--bd);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--hd);line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--a2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;margin-bottom:.6rem}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 2.2rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font:800 1.25rem var(--hd);text-decoration:none}.logo span{color:var(--a1)}
+.links{display:flex;gap:1.4rem;align-items:center}
+.links a{text-decoration:none;font-weight:500;color:var(--muted);padding:.3rem 0;border-bottom:2px solid transparent}
+.links a:hover,.links a.on{color:var(--text);border-color:var(--a1)}
+.ib{background:none;border:1px solid var(--line);color:var(--text);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+.burger{display:none}
+@media(max-width:760px){.burger{display:inline-block}.links{position:absolute;top:62px;left:0;right:0;flex-direction:column;background:var(--bg);padding:1rem 1.25rem 1.4rem;border-bottom:1px solid var(--line);display:none;align-items:flex-start}.links.open{display:flex}}
+.hero{padding:4rem 0 3rem}
+.hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr}}
+.hello{color:var(--a1);font-weight:700;margin:0 0 .6rem}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+.role{font:700 clamp(1.2rem,2.6vw,1.6rem) var(--hd);margin:.9rem 0;color:var(--a2);min-height:1.5em}
+.role i{display:inline-block;width:2px;height:1em;background:var(--a2);margin-left:3px;vertical-align:-.12em;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.tag{color:var(--muted);max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.6rem 0 1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid var(--text);cursor:pointer;font-family:var(--bd);font-size:1rem;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--a1);border-color:var(--a1);color:#fff}
+:root[data-theme="dark"] .btn.p{color:#1a1200}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.p{color:#1a1200}}
+.btn.g{background:transparent;color:var(--text)}
+.soc{display:flex;gap:1rem;flex-wrap:wrap}.soc a{color:var(--muted);font-weight:500}.soc a:hover{color:var(--a1)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.code{background:var(--code);color:var(--codetx);border-radius:16px;padding:1.1rem 1.2rem 1.2rem;font:.88rem/1.7 ui-monospace,Menlo,Consolas,monospace;box-shadow:0 20px 50px -25px #0008;overflow-x:auto}
+.dots{display:flex;gap:6px;margin-bottom:.8rem}.dots b{width:11px;height:11px;border-radius:50%;background:#ff5f57}.dots b:nth-child(2){background:#febc2e}.dots b:nth-child(3){background:#28c840}
+.code .k{color:#ff9d57}.code .t{color:#7fb0ff}.code .s{color:#8fe3a1}
+.run{margin-top:.8rem;background:#ffb347;color:#1a1200;border:0;border-radius:8px;padding:.5rem 1.1rem;font:700 .9rem var(--bd);cursor:pointer}
+.out{margin-top:.7rem;color:#8fe3a1;min-height:5.2em;white-space:pre-wrap}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin-top:1.6rem}
+.facts div{padding:1rem 1.1rem}.facts b{display:block;font:800 1.7rem var(--hd);color:var(--a1)}.facts span{color:var(--muted);font-size:.95rem}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.two p{margin:0 0 1rem}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.sk .card{padding:1.2rem}.sk h3{font-size:1.1rem;margin-bottom:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips span{padding:.3rem .8rem;border-radius:99px;border:1px solid var(--line);font-size:.92rem;font-weight:500;transition:.15s}
+.chips span:hover{border-color:var(--a1);color:var(--a1)}
+.chips .hi{background:var(--a2);color:#fff;border-color:var(--a2)}
+:root[data-theme="dark"] .chips .hi{color:#0b1226}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .chips .hi{color:#0b1226}}
+.proj{display:grid;gap:1.4rem}
+.pc{padding:1.6rem;transition:transform .2s,border-color .2s}
+.pc:hover{transform:translateY(-4px);border-color:var(--a1)}
+.pc h3{font-size:1.5rem;margin-bottom:.4rem}.pc>p{color:var(--muted);margin:0 0 1rem;max-width:70ch}
+.pc ul{margin:0 0 1rem;padding-left:1.2rem}.pc li{margin:.3rem 0}
+.pc button.more{background:none;border:0;color:var(--a2);font:700 1rem var(--bd);cursor:pointer;padding:0;margin-bottom:.8rem}
+.pc .det{display:none}.pc.open .det{display:block}
+.st{display:inline-block;margin-left:.6rem;padding:.1rem .7rem;border-radius:99px;font:700 .8rem var(--bd);border:1.5px solid var(--a1);color:var(--a1);vertical-align:middle}
+.tl{position:relative;margin-left:.6rem;padding-left:1.8rem;border-left:2px solid var(--line)}
+.tl>div{position:relative;margin-bottom:1.6rem}
+.tl>div::before{content:"";position:absolute;left:calc(-1.8rem - 7px);top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--a1);border:3px solid var(--bg)}
+.tl h3{font-size:1.25rem}.tl .m{color:var(--a2);font-weight:700;margin:.15rem 0 .5rem}
+.tl ul{margin:0;padding-left:1.1rem;color:var(--muted)}.tl li{margin:.25rem 0}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem}
+.edu .card{padding:1.3rem}.edu h3{font-size:1.1rem}.edu p{margin:.3rem 0;color:var(--muted)}.edu .sc{color:var(--a1);font:800 1.4rem var(--hd)}
+form{display:grid;gap:1rem;padding:1.5rem}
+label{font-weight:700;font-size:.95rem;display:grid;gap:.35rem}
+input,textarea{font:inherit;color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.75rem .9rem;width:100%}
+input:focus,textarea:focus{border-color:var(--a2);outline:none}
+textarea{min-height:130px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#st{min-height:1.5em;font-weight:500;margin:0}
+.ok{color:#1f9d55}.er{color:#d33}
+.cgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:2rem}
+@media(max-width:820px){.cgrid{grid-template-columns:1fr}}
+.ci a{display:block;margin:.4rem 0;font-weight:500}
+footer{border-top:1px solid var(--line);padding:1.8rem 0;color:var(--muted);text-align:center;font-size:.95rem}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#top">Kanishka<span>.</span></a>
+<div class="links" id="links">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</div>
+<div style="display:flex;gap:.5rem">
+<button class="ib" id="theme" aria-label="Switch light or dark theme">◐</button>
+<button class="ib burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></nav></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hgrid">
+<div>
+<p class="hello">Hi, I’m</p>
+<h1>Kanishka P G</h1>
+<div class="role" aria-live="polite"><span id="typed"></span><i></i></div>
+<p class="tag">Recent B.Tech Information Technology graduate who builds with Java, SQL and Android, and enjoys turning data structures and algorithms into working software.</p>
+<div class="btns">
+<a class="btn p" href="#projects">View my projects</a>
+<a class="btn g" href="#contact">Hire me</a>
+</div>
+<div class="soc">
+<a href="https://github.com/KANISHKAGEETHA" target="_blank" rel="noopener">GitHub</a>
+<a href="https://linkedin.com/in/kanishka-g-57b397297" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://leetcode.com/u/kanishkageetha" target="_blank" rel="noopener">LeetCode</a>
+<a href="mailto:reply2kanishka@gmail.com">Email</a>
+</div>
+</div>
+<div class="code" aria-label="Interactive Java snippet about Kanishka">
+<div class="dots"><b></b><b></b><b></b></div>
+<div><span class="k">public class</span> <span class="t">Kanishka</span> {<br>
+&nbsp;&nbsp;<span class="t">String</span> degree = <span class="s">"B.Tech IT, CGPA 8.26"</span>;<br>
+&nbsp;&nbsp;<span class="t">String</span>[] skills = {<span class="s">"Java"</span>, <span class="s">"SQL"</span>, <span class="s">"Python"</span>};<br>
+&nbsp;&nbsp;<span class="t">String</span> status = <span class="s">"Open to work"</span>;<br>
+&nbsp;&nbsp;<span class="k">void</span> main() { hire(); }<br>}</div>
+<button class="run" id="run">Run main()</button>
+<div class="out" id="out" aria-live="polite">Press run to see the output.</div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap rv">
+<h2>About me</h2>
+<div class="two">
+<div>
+<p>I’m a fresher with a solid base in Java, SQL, Data Structures &amp; Algorithms, Object-Oriented Programming and DBMS. I like problems that need clear thinking, and I practise them regularly on LeetCode.</p>
+<p>Alongside coursework I built an AI-based property detection app and an Android student records app, and completed a mobile development internship with Flutter and Android. I’m looking for a software role where I can ship real features and keep learning from experienced engineers.</p>
+<p style="color:var(--muted)">Languages: English, Tamil.</p>
+</div>
+<div class="facts">
+<div class="card"><b>8.26</b><span>CGPA in B.Tech IT</span></div>
+<div class="card"><b>2</b><span>Internships completed</span></div>
+<div class="card"><b>2</b><span>Projects built end to end</span></div>
+<div class="card"><b>2026</b><span>Graduating batch</span></div>
+</div></div></div></section>
+
+<section id="skills"><div class="wrap rv">
+<h2>Skills</h2>
+<p class="lead">What I work with day to day. Highlighted items are my strongest.</p>
+<div class="sk">
+<div class="card"><h3>Programming</h3><div class="chips"><span class="hi">Java</span><span class="hi">SQL</span><span>Python</span></div></div>
+<div class="card"><h3>Core computer science</h3><div class="chips"><span class="hi">Data Structures &amp; Algorithms</span><span class="hi">OOP</span><span>DBMS</span></div></div>
+<div class="card"><h3>Frontend</h3><div class="chips"><span class="hi">HTML</span><span class="hi">CSS</span></div></div>
+<div class="card"><h3>Backend</h3><div class="chips"><span class="hi">Java</span><span>Python</span><span>SQL</span><span>REST APIs</span><span>SQLite</span><span>Firebase</span></div></div>
+<div class="card"><h3>Tools &amp; platforms</h3><div class="chips"><span>Git</span><span>GitHub</span><span>OpenCV</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap rv">
+<h2>Projects</h2>
+<p class="lead">Two finished projects and two in progress. Select “See details” to read how each one works.</p>
+<div class="proj">
+<article class="card pc">
+<h3>Detection of Available Commercial Spaces</h3>
+<p>An AI-based mobile app that finds rental properties from video, reads the “To Let” boards using OCR and maps them by location.</p>
+<div class="chips" style="margin-bottom:1rem"><span class="hi">Python</span><span>OpenCV</span><span>OCR</span><span>Firebase</span><span>SQLite</span><span>GPS</span><span>REST APIs</span></div>
+<button class="more" aria-expanded="false">See details</button>
+<div class="det"><ul>
+<li>Extracts frames from video with OpenCV and recognises text in real-world scenes using OCR.</li>
+<li>Uses GPS to place each property on a map and give location-aware recommendations.</li>
+<li>Uses Firebase for sign-in, cloud storage and data sync, with REST APIs connecting the parts.</li>
+</ul></div>
+<a href="https://github.com/KANISHKAGEETHA" target="_blank" rel="noopener" style="color:var(--a2);font-weight:700">View code on GitHub</a>
+</article>
+<article class="card pc">
+<h3>Student Details App</h3>
+<p>An Android app for managing student records with a clean, easy-to-navigate interface.</p>
+<div class="chips" style="margin-bottom:1rem"><span class="hi">Java</span><span>SQLite</span><span>XML</span><span>Git</span></div>
+<button class="more" aria-expanded="false">See details</button>
+<div class="det"><ul>
+<li>Supports create, read, update and delete operations for student records.</li>
+<li>Stores data locally in SQLite for fast storage and retrieval, even offline.</li>
+<li>Built the screens in XML with simple navigation so records are quick to find.</li>
+</ul></div>
+<a href="https://github.com/KANISHKAGEETHA" target="_blank" rel="noopener" style="color:var(--a2);font-weight:700">View code on GitHub</a>
+</article>
+<article class="card pc">
+<h3>Job Application Tracker<span class="st">In progress</span></h3>
+<p>A web app to log job applications, track each stage from applied to offer, and see where my search stands.</p>
+<div class="chips" style="margin-bottom:1rem"><span class="hi">Python</span><span class="hi">SQL</span><span>Flask</span><span>HTML</span><span>CSS</span><span>REST APIs</span><span>Git</span></div>
+<button class="more" aria-expanded="false">See details</button>
+<div class="det"><ul>
+<li>Flask backend with REST APIs to add, edit, search and delete applications.</li>
+<li>Relational SQL schema for companies, roles, stages and interview dates, queried with joins and filters.</li>
+<li>Dashboard showing counts per stage and upcoming interviews, plus email reminders for follow-ups.</li>
+</ul></div>
+<span style="color:var(--muted);font-weight:500">Code will be published on GitHub</span>
+</article>
+<article class="card pc">
+<h3>Banking System with Transaction Engine<span class="st">In progress</span></h3>
+<p>A Java application that handles accounts, deposits, withdrawals and transfers safely, with every transaction recorded in a database.</p>
+<div class="chips" style="margin-bottom:1rem"><span class="hi">Java</span><span class="hi">SQL</span><span>JDBC</span><span>MySQL</span><span>OOP</span><span>JUnit</span><span>Git</span></div>
+<button class="more" aria-expanded="false">See details</button>
+<div class="det"><ul>
+<li>Object-oriented design with account types, interfaces and custom exceptions for errors like insufficient balance.</li>
+<li>Database transactions that keep transfers all-or-nothing, so a failed transfer never loses money.</li>
+<li>Transaction history with search and statements, covered by JUnit tests.</li>
+</ul></div>
+<span style="color:var(--muted);font-weight:500">Code will be published on GitHub</span>
+</article>
+</div></div></section>
+
+<section id="experience"><div class="wrap rv">
+<h2>Internship experience</h2>
+<p class="lead">Hands-on work in mobile development and data-driven marketing.</p>
+<div class="tl">
+<div><h3>Mobile App Development Intern</h3><p class="m">AICTE &amp; Marcello Tech (Online)</p>
+<ul><li>Built cross-platform apps using Flutter and Android.</li><li>Practised UI design, API integration and mobile app debugging.</li></ul></div>
+<div><h3>Social Media Executive Intern</h3><p class="m">O2 Saver Private Limited (Doctpro)</p>
+<ul><li>Tracked engagement, reach and impressions with data analytics to improve content strategy.</li><li>Ran data-driven campaigns that raised brand visibility.</li></ul></div>
+</div></div></section>
+
+<section id="education"><div class="wrap rv">
+<h2>Education</h2>
+<p class="lead">&nbsp;</p>
+<div class="edu">
+<div class="card"><h3>B.Tech, Information Technology</h3><p>Velalar College of Engineering and Technology, Erode</p><p>2022 – 2026</p><div class="sc">CGPA 8.26 / 10</div></div>
+<div class="card"><h3>HSC</h3><p>Adhiyaman Matric Hr. Sec. School, Uthangarai</p><p>2022</p><div class="sc">79%</div></div>
+<div class="card"><h3>SSLC</h3><p>Sri Vidya Mandir Matric Hr. Sec. School, Uthangarai</p><p>2020</p><div class="sc">96%</div></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap rv">
+<h2>Let’s work together</h2>
+<p class="lead">I’m open to software roles. Send a message and I’ll reply as soon as I can.</p>
+<div class="cgrid">
+<div class="ci">
+<p><b>Thindal, Erode, Tamil Nadu</b></p>
+<a href="mailto:reply2kanishka@gmail.com">reply2kanishka@gmail.com</a>
+<a href="tel:+919042952997">+91 90429 52997</a>
+<a href="https://linkedin.com/in/kanishka-g-57b397297" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/KANISHKAGEETHA" target="_blank" rel="noopener">GitHub</a>
+<a href="https://leetcode.com/u/kanishkageetha" target="_blank" rel="noopener">LeetCode</a>
+</div>
+<form class="card" id="f" novalidate>
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Your email<input name="email" type="email" required autocomplete="email"></label>
+<label>Message<textarea name="message" required></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn p" type="submit">Send message</button>
+<p id="st" role="status"></p>
+</form>
+</div></div></section>
+</main>
+<footer><div class="wrap">© 2026 Kanishka P G. Built with HTML, CSS and JavaScript.</div></footer>
+
+<script>
+// Set your deployed backend URL here (see server.js). Leave empty to use the email app instead.
+var BACKEND_URL='';
+var TO='reply2kanishka@gmail.com';
+var $=function(s){return document.querySelector(s)};
+// theme
+var root=document.documentElement;
+try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
+$('#theme').onclick=function(){
+ var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+ var n=dark?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}
+};
+// menu
+$('#bg').onclick=function(){var o=$('#links').classList.toggle('open');this.setAttribute('aria-expanded',o)};
+document.querySelectorAll('#links a').forEach(function(a){a.onclick=function(){$('#links').classList.remove('open')}});
+// typed role
+var roles=['Java Developer','Full Stack Developer','Problem Solver','Fresher, ready to ship'],ri=0,ci=0,del=false,tp=$('#typed');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){tp.textContent=roles[0]}else{(function t(){
+ var w=roles[ri];ci+=del?-1:1;tp.textContent=w.slice(0,ci);var d=del?35:75;
+ if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;d=300}
+ setTimeout(t,d)})()}
+// run snippet
+var busy=false;
+$('#run').onclick=function(){
+ if(busy)return;busy=true;var o=$('#out'),L=['> Compiling Kanishka.java ...','> Degree: B.Tech IT, CGPA 8.26','> Skills: Java, SQL, Python','> Status: Open to work. Contact below!'],i=0;o.textContent='';
+ (function n(){if(i<L.length){o.textContent+=(i?'\n':'')+L[i++];setTimeout(n,450)}else busy=false})()};
+// project details
+document.querySelectorAll('.pc .more').forEach(function(b){b.onclick=function(){
+ var c=b.parentNode,o=c.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Hide details':'See details'}});
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+// active nav
+var sec=document.querySelectorAll('main section[id]'),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){document.querySelectorAll('#links a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+sec.forEach(function(s){so.observe(s)});
+// contact form
+$('#f').onsubmit=function(ev){
+ ev.preventDefault();var f=ev.target,st=$('#st'),d={name:f.name.value.trim(),email:f.email.value.trim(),message:f.message.value.trim(),website:f.website.value};
+ st.className='';
+ if(!d.name||!/^\S+@\S+\.\S+$/.test(d.email)||d.message.length<5){st.className='er';st.textContent='Enter your name, a valid email and a message of at least 5 characters.';return}
+ function viaMail(){location.href='mailto:'+TO+'?subject='+encodeURIComponent('Portfolio message from '+d.name)+'&body='+encodeURIComponent(d.message+'\n\n'+d.name+'\n'+d.email);
+  st.textContent='Opening your email app. Press send there to deliver the message.'}
+ if(!BACKEND_URL){viaMail();return}
+ st.textContent='Sending...';
+ fetch(BACKEND_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+ .then(function(r){if(!r.ok)throw 0;st.className='ok';st.textContent='Message sent. Thank you, I’ll reply soon.';f.reset()})
+ .catch(function(){st.className='er';st.textContent='Could not reach the server. Opening your email app instead.';viaMail()})
+};
+</script>
+</body>
+</html>
