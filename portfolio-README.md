@@ -76,7 +76,7 @@ portfolio/
 
 ## What's next
 
-- [ ] Finish the Job Application Tracker and Banking System projects
+- [ ] Finish the Banking System projects
 - [ ] Add project screenshots and live demo links
 - [ ] Add a downloadable resume
 - [ ] Learn JavaScript and React, then rebuild a section with them
